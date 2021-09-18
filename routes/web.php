@@ -19,17 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', [PortfolioController::class, "index"]);
-//
-//Route::prefix("dashboard")->group(function () {
-//    Route::get("/", [DashboardController::class, "index"])->name("dashboard");
-//    Route::get("/skills", [SkillController::class, "index"])->name("skills");
-//    Route::get("/specializations", [SpecializationController::class, "index"])->name("specializations");
-//    Route::get("/projects", [ProjectController::class, "index"])->name("projects");
-//    Route::get("/profile", [UserController::class, "index"])->name("profile");
-//    Route::get("/logout", [DashboardController::class, "logout"])->name("logout");
-//});
+Route::get('/', [PortfolioController::class, "index"]);
 
-Route::get("/", function () {
-    return view("errors.maintenance");
+Route::prefix("dashboard")->group(function () {
+    Route::get("/", [DashboardController::class, "index"])->name("dashboard");
+    Route::get("/skills", [SkillController::class, "index"])->name("skills");
+    Route::get("/specializations", [SpecializationController::class, "index"])->name("specializations");
+    Route::get("/projects", [ProjectController::class, "index"])->name("projects");
+    Route::get("/profile", [UserController::class, "index"])->name("profile");
+    Route::get("/logout", [DashboardController::class, "logout"])->name("logout");
 });
