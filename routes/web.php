@@ -29,3 +29,7 @@ use Illuminate\Support\Facades\Route;
 //    Route::get("/profile", [UserController::class, "index"])->name("profile");
 //    Route::get("/logout", [DashboardController::class, "logout"])->name("logout");
 //});
+
+Route::get("/", function () {
+    return view("errors.maintenance");
+});
