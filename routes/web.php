@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PortfolioController::class, "index"]);
+Route::get('/', [PortfolioController::class, "index"])->name("home");
 
 Route::prefix("dashboard")->group(function () {
     Route::get("/", [DashboardController::class, "index"])->name("dashboard");
@@ -28,4 +28,9 @@ Route::prefix("dashboard")->group(function () {
     Route::get("/projects", [ProjectController::class, "index"])->name("projects");
     Route::get("/profile", [UserController::class, "index"])->name("profile");
     Route::get("/logout", [DashboardController::class, "logout"])->name("logout");
+});
+
+Route::prefix("services")->group(function() {
+    Route::post("/skill/{id?}", [SkillController::class, "store"])->name("skill.store");
+    Route::post("/skill/{id}/delete", [SkillController::class, "destroy"]);
 });

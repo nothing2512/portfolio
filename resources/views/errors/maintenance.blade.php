@@ -29,7 +29,7 @@
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
-    <link href="{{ admin("assets/css/bootstrap/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ admin("css/bootstrap/bootstrap.min.css") }}" rel="stylesheet">
     <link href="{{ portfolio("css/bootstrap.min.css") }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->

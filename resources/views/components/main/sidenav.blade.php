@@ -59,6 +59,17 @@
                     </li>
 
                 </ul>
+
+                <hr class="my-3"/>
+
+                <ul class="navbar-nav mb-md-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route("home") }}" target="_blank">
+                            <i class="ni ni-world-2"></i>
+                            <span class="nav-link-text">See Website</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

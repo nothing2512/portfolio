@@ -42,7 +42,11 @@
     <![endif]-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <style>
+        .skill {
+            padding-top: 1rem !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -247,16 +251,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-xs-12">
-                <a class="custom-icon facebook-bg" href="{{ $social->facebook }}">
+                <a class="custom-icon facebook-bg" href="{{ $social->facebook }}" target="_blank">
                     <i class="fab fa-facebook fa-2x"></i>
                 </a>
-                <a class="custom-icon github-bg" href="{{ $social->github }}">
+                <a class="custom-icon github-bg" href="{{ $social->github }}" target="_blank">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a class="custom-icon instagram-bg" href="{{ $social->instagram }}">
+                <a class="custom-icon instagram-bg" href="{{ $social->instagram }}" target="_blank">
                     <i class="fab fa-instagram fa-2x"></i>
                 </a>
-                <a class="custom-icon linkedin-bg" href="{{ $social->linkedin }}">
+                <a class="custom-icon linkedin-bg" href="{{ $social->linkedin }}" target="_blank">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
             </div>

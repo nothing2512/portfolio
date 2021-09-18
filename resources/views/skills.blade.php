@@ -31,22 +31,36 @@
 
 @section("script")
     {{--  Add Skill  --}}
-    <script type="application/javascript">
-        $(function () {
-            const addText = $("#add-text");
-            const addBtn = $("#add-btn");
+    <script type="application/javascript" defer>
+        const addText = $("#add-text");
+        const addBtn = $("#add-btn");
 
-            addText.on('keydown', function() {
-                setTimeout(function () {
-                    if (addText.val() === "") addBtn.addClass("disabled");
-                    else addBtn.removeClass("disabled");
-                }, 100)
-            });
-
-            addBtn.on('click', function () {
+        function addSkill() {
+            if (addText.val() !== "") {
                 let name = addText.val();
+                services.skill.store(name,
+                    (_) => {
+                        success(`Success add skill ${name}`, () => location.reload());
+                    },
+                    () => danger(`Failed add skill ${name}`));
+            }
+        }
 
-            });
+        addText.on('keydown', function () {
+            setTimeout(function () {
+                if (addText.val() === "") addBtn.addClass("disabled");
+                else addBtn.removeClass("disabled");
+            }, 100)
+        });
+
+        addText.on('keypress', function (e) {
+            if (e.which === 13) {
+                addSkill();
+            }
+        });
+
+        addBtn.on('click', function () {
+            addSkill();
         });
     </script>
 
@@ -56,14 +70,18 @@
 
             function editValue(id, value) {
                 id = id.split("-")[1];
-                console.log(id, value);
+                const name = $(`#item-${id} .item-name`).html()
+
+                services.skill.edit(id, value,
+                    (_) => console.log(`Success edit skill ${name}`),
+                    () => danger(`Failed edit skill ${name}`));
             }
 
             const sliders = document.getElementsByClassName("input-slider");
 
             for (let i = 0; i < sliders.length; i++) {
                 let slider = sliders.item(i);
-                slider.noUiSlider.updateOptions({ step: 5 });
+                slider.noUiSlider.updateOptions({step: 5});
                 slider.noUiSlider.on("change", function (values) {
                     editValue(slider.id, values[0]);
                 });
@@ -78,16 +96,20 @@
             const td = tr.find(".item-name");
             const name = td.html();
 
-            simplePrompt(`Are you sure want to delete skill ${name} ?`, function () {
-                $("#skills-table").DataTable().row(tr).remove().draw();
-                success(`Success delete skill ${name}`);
+            simplePrompt(`Are you sure want to delete skill ${name}?`, function () {
+                services.skill.delete(id,
+                    (_) => {
+                        $("#skills-table").DataTable().row(tr).remove().draw();
+                        success(`Success delete skill ${name}`);
+                    },
+                    () => danger(`Failed edit skill ${name}`));
             });
         }
     </script>
 
     {{--  Data Table  --}}
     <script type="application/javascript">
-        $(function (){
+        $(function () {
             const table = $("#skills-table")
                 .DataTable({
                     lengthChange: false,
@@ -116,15 +138,15 @@
                     ]
                 });
 
-            table.on( 'order.dt search.dt', function () {
+            table.on('order.dt search.dt', function () {
                 table.column(0, {
                     search: 'applied',
                     order: 'applied'
                 }).nodes()
-                    .each( function (cell, i) {
-                        cell.innerHTML = i+1;
+                    .each(function (cell, i) {
+                        cell.innerHTML = i + 1;
                     });
-                }).draw();
+            }).draw();
         });
     </script>
 @endsection

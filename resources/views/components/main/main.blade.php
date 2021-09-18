@@ -13,6 +13,7 @@
 </div>
 
 @include("components.main.scripts")
+@include("components.models")
 @yield("script")
 </body>
 </html>
