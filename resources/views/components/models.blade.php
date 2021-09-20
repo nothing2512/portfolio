@@ -1,5 +1,4 @@
 <script type="application/javascript">
-
     const services = {
         skill: {
             delete: function (id, success, fail) {
@@ -61,25 +60,31 @@
         },
         project: {
             delete: function (id, success, fail) {
-                const mainUrl = '{{ route("skill.store") }}'
+                const mainUrl = '{{ route("project.store") }}'
                 $.post(`${mainUrl}/${id}/delete`, {
                     _token: '{{ csrf_token() }}'
                 }, function (response) {
                     success(response)
                 }).fail(function () { fail() });
             },
-            edit: function (id, value, success, fail) {
-                const mainUrl = '{{ route("skill.store") }}'
+            edit: function (id, title, description, link, image, success, fail) {
+                const mainUrl = '{{ route("project.store") }}'
                 $.post(`${mainUrl}/${id}`, {
-                    value: value,
+                    title: title,
+                    description: description,
+                    link: link,
+                    image: image,
                     _token: '{{ csrf_token() }}'
                 }, function (response) {
                     success(response)
                 }).fail(function () { fail() });
             },
-            store: function (name, success, fail) {
-                $.post('{{ route("skill.store") }}', {
-                    name: name,
+            store: function (title, description, link, image, success, fail) {
+                $.post('{{ route("project.store") }}', {
+                    title: title,
+                    description: description,
+                    link: link,
+                    image: image,
                     _token: '{{ csrf_token() }}'
                 }, function (response) {
                     success(response)

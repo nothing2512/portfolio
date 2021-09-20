@@ -20,7 +20,7 @@
 
 @section("script")
 
-    {{--  Add Specialization  --}}
+    {{--  Add Edit Specialization  --}}
     <script type="application/javascript">
         const btShowModal = $("#btShowModal");
         const title = $("#title");
@@ -37,7 +37,7 @@
             btSubmit.html(btSubmit.html().replace("Edit", "Add"))
             title.val('')
             description.html('')
-            $(".dz-message").find("span").html("Drop files here to add icon")
+            $(".dz-message").find("span").html("Click or drop files here to add icon")
 
             $("#specialization-modal").modal('show')
         })
@@ -80,7 +80,7 @@
             isAdd = false;
             id = data.id;
 
-            $(".dz-message").find("span").html("Drop files here to edit icon")
+            $(".dz-message").find("span").html("Click or drop files here to edit icon")
             $("#specialization-modal").modal('show')
         }
     </script>

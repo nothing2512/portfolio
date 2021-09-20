@@ -37,6 +37,9 @@ Route::prefix("services")->group(function() {
 
     Route::post("/specialization/{id?}", [SpecializationController::class, "store"])->name("specialization.store");
     Route::post("/specialization/{id}/delete", [SpecializationController::class, "destroy"]);
+
+    Route::post("/project/{id?}", [ProjectController::class, "store"])->name("project.store");
+    Route::post("/project/{id}/delete", [ProjectController::class, "destroy"]);
 });
 
 Route::prefix("attachment")->group(function () {

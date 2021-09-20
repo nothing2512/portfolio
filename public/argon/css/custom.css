@@ -1,0 +1,30 @@
+.sp-icon {
+    width: 45px;
+    height: 45px;
+}
+.sp-project {
+    width: 90px;
+    height: 70px;
+}
+.dz-size {
+    width: 160px;
+    height: 160px;
+}
+.dz-project {
+    width: 360px;
+    height: 280px;
+}
+.dz-size .dz-message {
+    padding: 55px 1rem;
+}
+.dz-project .dz-message {
+    padding: 8rem 1rem;
+}
+.swal2-popup .swal2-content {
+    font-size: 1rem;
+}
+.text-overflow-hidden {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

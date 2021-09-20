@@ -53,6 +53,7 @@
                 })
             }
         }
+
         preview.html('');
         $this.dropzone(options)
     }
