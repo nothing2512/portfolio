@@ -46,6 +46,10 @@
         .skill {
             padding-top: 1rem !important;
         }
+        .sp-icon {
+            width: 45px;
+            height: 45px;
+        }
     </style>
 </head>
 <body>
@@ -162,7 +166,7 @@
                     <div class="col-sm-4">
                         <div class="service">
                             @if($item->iconType == "svg")
-                                <embed src="{{ $item->icon }}">
+                                <embed src="{{ $item->icon }}" class="sp-icon">
                             @else
                                 <img src="{{ $item->icon }}" alt="{{ $item->name }}">
                             @endif

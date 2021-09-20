@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectController;
@@ -33,4 +34,13 @@ Route::prefix("dashboard")->group(function () {
 Route::prefix("services")->group(function() {
     Route::post("/skill/{id?}", [SkillController::class, "store"])->name("skill.store");
     Route::post("/skill/{id}/delete", [SkillController::class, "destroy"]);
+
+    Route::post("/specialization/{id?}", [SpecializationController::class, "store"])->name("specialization.store");
+    Route::post("/specialization/{id}/delete", [SpecializationController::class, "destroy"]);
+});
+
+Route::prefix("attachment")->group(function () {
+    Route::post("/upload", [AttachmentController::class, "upload"])->name("attachment.upload");
+    Route::get("/{path?}", [AttachmentController::class, "show"])
+        ->where('path', '.*')->name("attachment");
 });

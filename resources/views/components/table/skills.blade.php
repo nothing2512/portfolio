@@ -11,7 +11,7 @@
     <tbody>
     @foreach($skills as $item)
         <tr id="item-{{ $item->id }}">
-            <td class="skill-numbering"></td>
+            <td></td>
             <td class="item-name">{{ $item->name }}</td>
             <td>
                 <div class="input-slider-container">

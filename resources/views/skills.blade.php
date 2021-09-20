@@ -39,9 +39,7 @@
             if (addText.val() !== "") {
                 let name = addText.val();
                 services.skill.store(name,
-                    (_) => {
-                        success(`Success add skill ${name}`, () => location.reload());
-                    },
+                    (_) => success(`Success add skill ${name}`, () => location.reload()),
                     () => danger(`Failed add skill ${name}`));
             }
         }
@@ -102,7 +100,7 @@
                         $("#skills-table").DataTable().row(tr).remove().draw();
                         success(`Success delete skill ${name}`);
                     },
-                    () => danger(`Failed edit skill ${name}`));
+                    () => danger(`Failed delete skill ${name}`));
             });
         }
     </script>
@@ -124,7 +122,7 @@
                     },
                     columnDefs: [
                         {
-                            targets: [0, 1, 2, 3],
+                            targets: [2, 3],
                             orderable: false
                         },
                         {

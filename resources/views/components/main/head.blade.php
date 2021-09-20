@@ -17,6 +17,29 @@
     <link rel="stylesheet" href="{{ admin("vendor/datatables.net-bs4/css/dataTables.bootstrap4.min.css") }}">
     <link rel="stylesheet" href="{{ admin("vendor/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css") }}">
     <link rel="stylesheet" href="{{ admin("vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css") }}">
+    <link rel="stylesheet" href="{{ admin("vendor/select2/dist/css/select2.min.css") }}">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{ admin("css/argon.css?v=1.1.0") }}" type="text/css">
+
+    <style>
+        .sp-icon {
+            width: 45px;
+            height: 45px;
+        }
+        .dz-size {
+            width: 160px;
+            height: 160px;
+        }
+        .dz-size .dz-message {
+            padding: 55px 1rem;
+        }
+        .swal2-popup .swal2-content {
+            font-size: 1rem;
+        }
+        .text-overflow-hidden {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
 </head>
