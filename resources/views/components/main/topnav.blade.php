@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-start ml-0">
-                <h6 class="h2 text-white d-inline-block mb-0">Welcome! {{ $user->name ?? "Admin" }}</h6>
+                <div class="h2 text-white d-inline-block mb-0">Welcome! {{ $user->name ?? "Admin" }}</div>
             </ul>
             <ul class="navbar-nav align-items-center ml-auto ml-md-auto">
                 <li class="nav-item">

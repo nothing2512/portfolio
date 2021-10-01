@@ -69,7 +69,6 @@
                 </button>
 
                 <a href="#hero" class="site-logo">
-{{--                    <img src="{{ portfolio("img/logo.png") }}" alt="logo">--}}
                     <h3 class="text-logo">PORTFOLIO</h3>
                 </a>
 

@@ -28,3 +28,9 @@
     overflow: hidden;
     white-space: nowrap;
 }
+.profile-background {
+    min-height: 500px;
+    background-image: url("../../portfolio/img/hero.jpg");
+    background-size: cover;
+    background-position: center top;
+}
