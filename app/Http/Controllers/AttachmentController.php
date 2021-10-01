@@ -11,6 +11,11 @@ class AttachmentController extends Controller
 {
     function show($path): StreamedResponse
     {
+        return Storage::response($path);
+    }
+
+    function download($path): StreamedResponse
+    {
         return Storage::download($path);
     }
 

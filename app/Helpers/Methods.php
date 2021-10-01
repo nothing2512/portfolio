@@ -20,6 +20,14 @@ if (!function_exists("admin")) {
     }
 }
 
+if (!function_exists("attachment")) {
+    function attachment($path=null): ?string
+    {
+        if ($path == null || $path == "") return null;
+        return route("attachment", ["path" => $path]);
+    }
+}
+
 if (!function_exists("error")) {
     function error($message = ""): RedirectResponse
     {

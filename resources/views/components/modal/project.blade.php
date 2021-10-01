@@ -18,7 +18,7 @@
                                 data-toggle="dropzone"
                                 data-dropzone-url="{{ route("attachment.upload") }}"
                                 data-dropzone-mime="image/*"
-                                data-dropzone-context="specialization">
+                                data-dropzone-context="projects">
                                 <div class="fallback">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" id="projectCoverUploads">

@@ -281,9 +281,9 @@
                     <div class="col-sm-4">
                         <div class="service">
                             @if($item->iconType == "svg")
-                                <embed src="{{ $item->icon }}" class="sp-icon">
+                                <embed src="{{ attachment($item->icon) }}" class="sp-icon">
                             @else
-                                <img src="{{ $item->icon }}" alt="{{ $item->name }}">
+                                <img src="{{ attachment($item->icon) }}" alt="{{ $item->name }}">
                             @endif
 
                             <h4>{{ $item->title }}</h4>
@@ -307,7 +307,7 @@
                 @foreach($projects as $item)
                     <div class="col-md-4 col-xs-6 mb-3 {{ $i < 6 ? '' : 'd-none' }}">
                         <div class="portfolio-item">
-                            <img src="{{ $item->image }}" class="img-res" alt="">
+                            <img src="{{ attachment($item->image) }}" class="img-res" alt="">
                             <div class="portfolio-item-info">
                                 <h4>{{ $item->title }}</h4>
                                 <a onclick="showModal('{{ json_encode($item) }}')">

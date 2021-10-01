@@ -35,14 +35,14 @@ class UserController extends Controller
         if ($cover != null) {
             $filename = uniqid() . "." . $cover->extension();
             $cover->storeAs("cover", $filename);
-            $user->fill(["cover" => env("APP_URL") . "/attachment/cover/$filename"]);
+            $user->fill(["cover" => "cover/$filename"]);
         }
 
         $photo = $request->file("photo");
         if ($photo != null) {
             $filename = uniqid() . "." . $photo->extension();
             $photo->storeAs("photo", $filename);
-            $user->fill(["photo" => env("APP_URL") . "/attachment/photo/$filename"]);
+            $user->fill(["photo" => "photo/$filename"]);
         }
 
         $user->save();

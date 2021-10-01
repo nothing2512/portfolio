@@ -83,6 +83,7 @@
             modalTitle.html(modalTitle.html().replace("Add", "Edit"))
             btSubmit.html(btSubmit.html().replace("Add", "Edit"))
             title.val(data.title)
+            link.val(data.link)
             description.html(data.description)
             isAdd = false;
             id = data.id;

@@ -15,9 +15,9 @@
             <td></td>
             <td>
                 @if($item->iconType == "svg")
-                    <embed src="{{ $item->icon }}" class="sp-icon">
+                    <embed src="{{ attachment($item->icon) }}" class="sp-icon">
                 @else
-                    <img src="{{ $item->icon }}" class="sp-icon" alt="{{ $item->title }}">
+                    <img src="{{ attachment($item->icon) }}" class="sp-icon" alt="{{ $item->title }}">
                 @endif
             </td>
             <td class="item-title">{{ $item->title }}</td>

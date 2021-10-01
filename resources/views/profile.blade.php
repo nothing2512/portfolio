@@ -43,7 +43,7 @@
                     <button class="btn btn-neutral text-gray-dark" id="btUpdateCover">Update cover photo</button>
                 </div>
                 <div class="col text-right h-100 align-self-end mt-lg-5 pt-lg-5">
-                    <img style="height: 500px" src="{{ $user->cover ?: portfolio("img/custom/photo-no-bg.png") }}" alt="cover">
+                    <img style="height: 500px" src="{{ attachment($user->cover) ?: portfolio("img/custom/photo-no-bg.png") }}" alt="cover">
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="{{ $user->photo ?: admin("img/theme/team-4.jpg") }}" class="rounded-circle" alt="photo">
+                                    <img src="{{ attachment($user->photo) ?: admin("img/theme/team-4.jpg") }}" class="rounded-circle" alt="photo">
                                 </a>
                             </div>
                         </div>
@@ -73,15 +73,15 @@
                             <div class="col">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading">{{ $counter->project ?: 10 }}</span>
+                                        <span class="heading">{{ $counter->projects }}</span>
                                         <span class="description">Projects</span>
                                     </div>
                                     <div>
-                                        <span class="heading">{{ $counter->specializations ?: 10 }}</span>
+                                        <span class="heading">{{ $counter->specializations }}</span>
                                         <span class="description">Specializations</span>
                                     </div>
                                     <div>
-                                        <span class="heading">{{ $counter->skills ?: 10 }}</span>
+                                        <span class="heading">{{ $counter->skills }}</span>
                                         <span class="description">Skills</span>
                                     </div>
                                 </div>
@@ -89,10 +89,10 @@
                         </div>
                         <div class="text-center">
                             <h5 class="h3">
-                                {{ $user->name ?: "Robet Atiq Maulana Rifqi" }}
+                                {{ $user->name }}
                             </h5>
                             <div>
-                                {{ $user->job ?: "DevOps developer" }}
+                                {{ $user->job }}
                             </div>
                         </div>
                         <div class="form-group pt-3">
@@ -121,7 +121,7 @@
                                             </span>
                                         </div>
                                         <label for="facebook"></label>
-                                        <input id="facebook" class="form-control pl-2" placeholder="Facebook" type="text" value="{{ $social->facebook ?:"" }}">
+                                        <input id="facebook" class="form-control pl-2" placeholder="Facebook" type="text" value="{{ $social->facebook ?: "" }}">
                                     </div>
                                 </div>
 
@@ -133,7 +133,7 @@
                                             </span>
                                         </div>
                                         <label for="github"></label>
-                                        <input id="github" class="form-control pl-2" placeholder="Github" type="text"  value="{{ $social->github ?:"" }}">
+                                        <input id="github" class="form-control pl-2" placeholder="Github" type="text"  value="{{ $social->github ?: "" }}">
                                     </div>
                                 </div>
 
@@ -145,7 +145,7 @@
                                             </span>
                                         </div>
                                         <label for="instagram"></label>
-                                        <input id="instagram" class="form-control pl-2" placeholder="Instagram" type="text" value="{{ $social->instagram ?:"" }}">
+                                        <input id="instagram" class="form-control pl-2" placeholder="Instagram" type="text" value="{{ $social->instagram ?: "" }}">
                                     </div>
                                 </div>
 
@@ -157,7 +157,7 @@
                                             </span>
                                         </div>
                                         <label for="linkedin"></label>
-                                        <input id="linkedin" class="form-control pl-2" placeholder="Linkedin" type="text"  value="{{ $social->linkedin ?:"" }}">
+                                        <input id="linkedin" class="form-control pl-2" placeholder="Linkedin" type="text"  value="{{ $social->linkedin ?: "" }}">
                                     </div>
                                 </div>
 

@@ -13,7 +13,7 @@
     @foreach($projects as $item)
         <tr id="item-{{ $item->id }}">
             <td></td>
-            <td><img src="{{ $item->image }}" class="sp-project" alt="{{ $item->title }}"></td>
+            <td><img src="{{ attachment($item->image) }}" class="sp-project" alt="{{ $item->title }}"></td>
             <td class="item-title">{{ $item->title }}</td>
             <td class="text-overflow-hidden" style="max-width: 80vh">
                 {{ $item->description }}

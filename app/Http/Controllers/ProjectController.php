@@ -23,13 +23,11 @@ class ProjectController extends Controller
         $image = $request->input("image");
 
         if ($id == null) {
-            $project = Project::query()->create(array_merge($request->all(), [
-                "image" => route("attachment", $image)
-            ]));
+            $project = Project::query()->create($request->all());
         } else {
             $project = Project::query()->where("id", $id)->first();
             $project->fill($request->all());
-            if ($image != null) $project->image = route("attachment", $image);
+            if ($image != null) $project->image = $image;
             $project->save();
         }
 
