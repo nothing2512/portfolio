@@ -50,6 +50,38 @@
             width: 45px;
             height: 45px;
         }
+
+        .social-container {
+            display: flex;
+            flex-direction: row;
+            padding-top: 1rem;
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16pt;
+            padding: .5rem;
+            margin: .5rem;
+        }
+
+        .social-icon:hover {
+            background-color: black;
+            box-shadow: 0 .5rem .5rem rgba(0,0,0,.15);
+        }
+
+        .social-icon:hover a {
+            color: white;
+        }
+
+        .social-icon a {
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -104,10 +136,37 @@
                     <div class="clearfix visible-xxs"></div>
                     <a href="#portfolio" class="btn btn-border">Explore more</a>
                 </div>
+                <div class="social-container">
+
+                    <div class="social-icon">
+                        <a href="{{ $social->github }}" target="_blank">
+                            <i class="fab fa-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-icon">
+                        <a href="{{ $social->instagram }}" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-icon">
+                        <a href="{{ $social->facebook }}" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+
+                    <div class="social-icon">
+                        <a href="{{ $social->linkedin }}" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+                </div>
             </div>
 
             <div class="col-md-6 text-right">
-                <img src="{{ $user->photo }}" alt="{{ $user->name }}">
+                <img src="{{ $user->cover }}" alt="{{ $user->name }}">
             </div>
 
         </div>

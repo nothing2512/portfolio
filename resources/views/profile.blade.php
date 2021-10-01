@@ -40,7 +40,7 @@
                 <div class="col-md-6 align-self-center">
                     <h1 class="display-2 text-gray-dark">Hello {{ $user->name ?: "Admin" }}</h1>
                     <p class="text-gray-dark mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-                    <button class="btn btn-neutral text-gray-dark">Update cover photo</button>
+                    <button class="btn btn-neutral text-gray-dark" id="btUpdateCover">Update cover photo</button>
                 </div>
                 <div class="col text-right h-100 align-self-end mt-lg-5 pt-lg-5">
                     <img style="height: 500px" src="{{ $user->cover ?: portfolio("img/custom/photo-no-bg.png") }}" alt="cover">
@@ -214,8 +214,8 @@
 
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="name">Experience</label>
-                                        <input type="number" id="name" class="form-control" placeholder="Experience" value="{{ $user->experience ?: "" }}">
+                                        <label class="form-control-label" for="experience">Experience</label>
+                                        <input type="number" id="experience" class="form-control" placeholder="Experience" value="{{ $user->experience ?: "" }}">
                                     </div>
                                 </div>
 
@@ -242,11 +242,74 @@
     </div>
 </div>
 
+<div class="d-none">
+    <form method="post" enctype="multipart/form-data" action="{{ route("profile.update") }}">
+        @csrf
+        <input id="inputPhoto" name="photo" aria-labelledby="photo" type="file" accept="image/*">
+        <input id="inputCover" name="cover" aria-labelledby="cover" type="file" accept="image/*">
+    </form>
+</div>
+
 @include("components.main.scripts")
 @include("components.models")
 
 <script type="application/javascript">
-    
+    $("#btUpdateProfile").on('click', function(e) {
+        e.preventDefault();
+
+        const username = $("#username");
+        const password = $("#password");
+        const name = $("#name");
+        const job = $("#job");
+        const experience = $("#experience");
+        const bio = $("#bio");
+
+        const payload = {
+            username: username.val(),
+            password: password.val(),
+            name: name.val(),
+            job: job.val(),
+            experience: experience.val(),
+            bio: bio.html()
+        };
+
+        services.profile.edit(payload,
+            (_) => success("Success Edit Profile"),
+            () => danger(`Failed edit profile`));
+    })
+
+    $("#btEditSocial").on('click', function(e) {
+        e.preventDefault();
+
+        const payload = {
+            facebook: $("#facebook").val(),
+            github: $("#github").val(),
+            instagram: $("#instagram").val(),
+            linkedin: $("#linkedin").val(),
+        };
+
+        services.profile.edit(payload,
+            (_) => success("Success Edit Profile"),
+            () => danger(`Failed edit profile`));
+    })
+
+    $("#btUpdatePhoto").on('click', function (e) {
+        e.preventDefault();
+        $("#inputPhoto").click();
+    })
+
+    $("#btUpdateCover").on('click', function (e) {
+        e.preventDefault();
+        $("#inputCover").click();
+    })
+
+    $("#inputPhoto").on('change', function (_) {
+        $(this).parent().get(0).submit()
+    })
+
+    $("#inputCover").on('change', function (_) {
+        $(this).parent().get(0).submit()
+    })
 </script>
 
 </body>

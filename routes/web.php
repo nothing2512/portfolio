@@ -40,6 +40,8 @@ Route::prefix("services")->group(function() {
 
     Route::post("/project/{id?}", [ProjectController::class, "store"])->name("project.store");
     Route::post("/project/{id}/delete", [ProjectController::class, "destroy"]);
+
+    Route::post("/profile/update", [UserController::class, "update"])->name("profile.update");
 });
 
 Route::prefix("attachment")->group(function () {
