@@ -22,7 +22,7 @@
                 <a href="{{ $item->link }}" class="btn btn-success btn-sm" target="_blank">
                     <i class="ni ni-world-2"></i>
                 </a>
-                <button class="btn btn-warning btn-sm" onclick="editProject('{{ json_encode($item) }}')">
+                <button class="btn btn-warning btn-sm" onclick='editProject({!! $item !!})'>
                     <i class="fas fa-edit"></i>
                 </button>
                 <button class="btn btn-danger btn-sm" onclick="deleteProject('{{ $item->id }}')">

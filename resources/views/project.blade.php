@@ -79,7 +79,7 @@
         })
 
         function editProject(data) {
-            data = JSON.parse(data)
+            if (typeof data === "string") data = JSON.parse(data)
             modalTitle.html(modalTitle.html().replace("Add", "Edit"))
             btSubmit.html(btSubmit.html().replace("Add", "Edit"))
             title.val(data.title)

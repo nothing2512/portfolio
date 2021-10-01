@@ -310,7 +310,7 @@
                             <img src="{{ attachment($item->image) }}" class="img-res" alt="">
                             <div class="portfolio-item-info">
                                 <h4>{{ $item->title }}</h4>
-                                <a onclick="showModal('{{ json_encode($item) }}')">
+                                <a onclick='showModal({!! $item !!})'>
                                     <span class="glyphicon glyphicon-eye-open"></span></a>
                                 <a href="{{ $item->link }}"><span class="glyphicon glyphicon-link"></span></a>
                             </div><!-- /.portfolio-item-info -->
@@ -350,21 +350,20 @@
 
             <h3>Contact</h3>
             <img src="{{ portfolio("img/lines.svg") }}" class="img-lines" alt="lines">
-            <form>
+            <form method="post" action="{{ route("mail") }}">
+                @csrf
                 <div class="row">
                     <div class="col-sm-6">
-                        <input type="text" name="name" class="form-control mt-x-0" placeholder="Name" required>
+                        <input id="mail-name" type="text" name="name" class="form-control mt-x-0" placeholder="Name" required>
                     </div>
                     <div class="col-sm-6">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        <input id="mail-email" type="email" name="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="col-sm-12">
-                        <textarea name="message" id="mesaage" class="form-control" placeholder="Message"
-                                  required></textarea>
+                        <textarea name="message" id="mail-mesaage" class="form-control" placeholder="Message" required></textarea>
                     </div>
                 </div>
-                <button href="#" class="btn btn-border" type="submit">Hire Me <span
-                        class="glyphicon glyphicon-send"></span></button>
+                <button class="btn btn-border" type="submit">Hire Me <span class="glyphicon glyphicon-send"></span></button>
             </form>
         </div>
     </section><!-- /.section-form -->
@@ -430,10 +429,10 @@
 
 <script>
     function showModal(data) {
-        data = JSON.parse(data)
+        if (typeof data === "string") data = JSON.parse(data)
         $("#portfolio-modal-title").html(data.title)
-        $("#portfolio-modal-description").html(data.description)
-        $("#portfolio-modal-image").attr("src", data.image)
+        $("#portfolio-modal-description").html("<br>" + data.description.replaceAll("\n", "<br>"))
+        $("#portfolio-modal-image").attr("src", "{{ route("attachment") }}/" + data.image)
         $("#portfolio-modal-link").attr("href", data.link)
         $("#portfolio-modal").modal('show')
     }
