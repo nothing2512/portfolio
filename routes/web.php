@@ -44,8 +44,8 @@ Route::get('/', [PortfolioController::class, "index"])->name("home");
 //    Route::post("/profile/update", [UserController::class, "update"])->name("profile.update");
 //});
 //
-//Route::prefix("attachment")->group(function () {
-//    Route::post("/upload", [AttachmentController::class, "upload"])->name("attachment.upload");
-//    Route::get("/{path?}", [AttachmentController::class, "show"])
-//        ->where('path', '.*')->name("attachment");
-//});
+Route::prefix("attachment")->group(function () {
+    Route::post("/upload", [AttachmentController::class, "upload"])->name("attachment.upload");
+    Route::get("/{path?}", [AttachmentController::class, "show"])
+        ->where('path', '.*')->name("attachment");
+});
