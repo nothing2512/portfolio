@@ -223,7 +223,7 @@
             </div>
 
             <div class="col-md-6 text-right">
-                <img src="{{ $user->cover }}" alt="{{ $user->name }}">
+                <img src="{{ attachment($user->cover) }}" alt="{{ $user->name }}">
             </div>
 
         </div>
