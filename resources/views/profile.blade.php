@@ -222,9 +222,7 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="bio">Bio</label>
-                                        <textarea type="text" id="bio" class="form-control" rows="9">
-                                                {{ $user->bio ?: "" }}
-                                        </textarea>
+                                        <textarea type="text" id="bio" class="form-control" rows="9">{{ $user->bio ?: "" }}</textarea>
                                     </div>
                                 </div>
 

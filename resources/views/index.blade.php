@@ -1,3 +1,4 @@
+<?php $i = 0; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +44,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+
         .skill {
             padding-top: 1rem !important;
         }
+
         .sp-icon {
             width: 45px;
             height: 45px;
@@ -81,6 +84,60 @@
 
         .social-icon a {
             color: black;
+        }
+
+        .modal .img-res {
+            object-fit: fill;
+            height: unset;
+        }
+
+        .modal-header {
+            height: fit-content;
+        }
+
+        .portfolio-item {
+            overflow: hidden;
+        }
+
+        .portfolio-item img.img-res {
+            transition: all .2s;
+        }
+
+        .portfolio-item:hover img.img-res {
+            transform: scale(1.2);
+        }
+
+        .col-md-4.col-xs-6.mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+
+        .show-more {
+            font-weight: bold;
+            align-self: center;
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .show-more:hover {
+            cursor: pointer;
+        }
+
+        .show-more:hover:after {
+            width: 110%;
+            margin-left: -5%;
+            border-bottom: 2px solid black;
+            transition: all .1s;
+        }
+
+        .show-more:after {
+            content: '';
+            border-bottom: 1px solid black;
+            width: 80%;
+            margin-left: 10%;
         }
     </style>
 </head>
@@ -248,7 +305,7 @@
             <div class="row">
 
                 @foreach($projects as $item)
-                    <div class="col-md-4 col-xs-6">
+                    <div class="col-md-4 col-xs-6 mb-3 {{ $i < 6 ? '' : 'd-none' }}">
                         <div class="portfolio-item">
                             <img src="{{ $item->image }}" class="img-res" alt="">
                             <div class="portfolio-item-info">
@@ -259,7 +316,12 @@
                             </div><!-- /.portfolio-item-info -->
                         </div><!-- /.portfolio-item -->
                     </div>
+                    <?php $i++ ?>
                 @endforeach
+            </div>
+
+            <div class="text-center">
+                <span class="show-more" data-toggle="portfolio">Show More</span>
             </div>
         </div>
     </section><!-- /.secton-portfolio -->
@@ -375,6 +437,17 @@
         $("#portfolio-modal-link").attr("href", data.link)
         $("#portfolio-modal").modal('show')
     }
+
+    $(".show-more").each(function(_) {
+        const toggle = $(this).data("toggle")
+        $(this).on('click', function(e) {
+            e.preventDefault();
+            $(`#${toggle} .d-none`).each(function(_) {
+                $(this).removeClass("d-none")
+            })
+            $(this).addClass("d-none")
+        })
+    })
 </script>
 
 </body>

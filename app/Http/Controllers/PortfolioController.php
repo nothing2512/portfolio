@@ -17,11 +17,8 @@ class PortfolioController extends Controller
         $social = Social::query()->first();
         $skills = Skill::query()->get();
         $specialization = Specialization::query()->get();
-        $projects = Project::query()
-            ->orderByDesc("id")
-            ->paginate(6, "*", "page", 1)
-            ->items();
-        $totalProject = Project::query()->count();
+        $projects = Project::query()->orderByDesc("id")->get();
+        $totalProject = sizeof($projects);
 
         return view("index")->with([
             "user" => $user,
@@ -29,7 +26,7 @@ class PortfolioController extends Controller
             "social" => $social,
             "skills" => $skills,
             "specializations" => $specialization,
-            "projects" => array_slice($projects, 0, 6)
+            "projects" => $projects
         ]);
     }
 }
