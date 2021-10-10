@@ -239,7 +239,7 @@
                     <h2>About</h2>
                     <img src="{{ portfolio("img/lines.svg") }}" class="img-lines" alt="lines">
                     <p>{{ $user->bio }}</p>
-                    <a href="{{ $user->cv }}" class="btn btn-fill" target="_blank" download>Download my cv</a>
+                    <a href="{{ route("attachment", $user->cv) }}" class="btn btn-fill" target="_blank" download>Download my cv</a>
                 </div>
             </div>
         </div>
