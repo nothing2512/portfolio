@@ -14,6 +14,7 @@
                             <h3 id="modal-title">
                                 Please input your email, we will send file to your email.
                             </h3>
+                            <p>Notes: Check your spam folder if not received any email or search "admin@robet.my.id" on your email</p>
                         </div>
                     </div>
                     <div class="card-body px-lg-5">

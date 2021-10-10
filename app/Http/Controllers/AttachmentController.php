@@ -12,19 +12,6 @@ class AttachmentController extends Controller
 {
     function show($path): View
     {
-
-        Mail::send('mail', [], function ($message) {
-            $message->from(env("MAIL_USERNAME"), "Robet Atiq Maulana Rifqi")
-                ->to("blank345red@gmail.com", "You")
-                ->subject("Download File")
-                ->attach(storage_path("app/cover/615720d31609c.png"));
-
-            $message->getHeaders()->addTextHeader(
-                "List-Unsubscribe",
-                "<mailto:admin@robet.my.id?subject=UnsubscribeEmail&body=UnsubscribeEmail>"
-            );
-        });
-
         return view('attachment', [
             "path" => $path
         ]);
@@ -56,8 +43,7 @@ class AttachmentController extends Controller
             die($e->getMessage());
         }
 
-//        return redirect()->route("home");
-
+        return redirect()->route("home");
     }
 
     function upload(Request $request): JsonResponse
