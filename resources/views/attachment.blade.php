@@ -12,14 +12,29 @@
                     <div class="card-header bg-transparent pt-3 pb-2">
                         <div class="text-muted text-center">
                             <h3 id="modal-title">
-                                Please input your email, we will send file to your email.
+                                Masukkan alamat email anda.
                             </h3>
-                            <p>Notes: Check your spam folder if not received any email or search "admin@robet.my.id" on your email</p>
+                            <p>Notes: Jika email belum terkirim setelah 5 menit, cek folder spam, atau bisa kontak: <a href="mailto:mail@robet.my.id"></a></p>
                         </div>
                     </div>
                     <div class="card-body px-lg-5">
                         <form role="form" method="POST" action="{{ route('attachment.download') }}">
                             @csrf
+
+                            <div class="form-group">
+                                <label class="form-control-label" for="filename">
+                                    Filename<sup class="text-danger">*</sup>
+                                </label>
+                                <input type="text" name="filename" class="form-control" id="filename" value="{{ $filename }}" disabled readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-control-label" for="name">
+                                    Name<sup class="text-danger">*</sup>
+                                </label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Name..." required>
+                            </div>
+
                             <div class="form-group">
                                 <label class="form-control-label" for="email">
                                     Email<sup class="text-danger">*</sup>
@@ -27,7 +42,7 @@
                                 <input type="email" name="email" class="form-control" id="email" placeholder="Email..." required>
                             </div>
 
-                            <input type="hidden" name="dir" value="{{ $path }}" readonly>
+                            <input type="hidden" name="id" value="{{ $id }}" readonly>
 
                             <div class="text-center">
                                 <button id="btSubmit" type="submit" class="btn btn-primary my-4">Send File</button>

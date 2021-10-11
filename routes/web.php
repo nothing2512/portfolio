@@ -47,9 +47,11 @@ Route::post("/mail", [MailController::class, "store"])->name("mail");
 //});
 
 Route::prefix("attachment")->group(function () {
+    Route::get("/list", [AttachmentController::class, "index"]);
+    Route::post("/upload/manual", [AttachmentController::class, "manualUpload"]);
     Route::post("/upload", [AttachmentController::class, "upload"])->name("attachment.upload");
-    Route::post("/download/{path?}", [AttachmentController::class, "download"])
-        ->where('path', '.*')
+    Route::any("/download/{token?}", [AttachmentController::class, "download"])
+        ->where('token', '.*')
         ->name("attachment.download");
     Route::get("/{path?}", [AttachmentController::class, "show"])
         ->where('path', '.*')->name("attachment");

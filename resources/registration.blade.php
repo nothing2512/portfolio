@@ -105,7 +105,7 @@
 <!-- HIDDEN PREHEADER TEXT -->
 <div
     style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    Terima kasih telah menggunakan jasa kami.
+    We're thrilled to have you here! Get ready to dive into your new account.
 </div>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <!-- LOGO -->
@@ -138,8 +138,8 @@
                 <tr>
                     <td align="left" bgcolor="#ffffff"
                         style="padding: 20px 30px 40px 30px; color: #000000; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                        <h4 style="margin: 0;">Terima kasih telah menggunakan jasa kami.</h4>
-                        <p>Silahkan download file dibawah.</p>
+                        <p style="margin: 0;">Kami senang Anda memulai. Pertama, Anda perlu mengkonfirmasi akun Anda.
+                            Cukup tekan tombol di bawah.</p>
                     </td>
                 </tr>
                 <tr>
@@ -151,7 +151,8 @@
                                         <tr>
                                             <td align="center" bgcolor="#EB5757" style="border-radius: 3px;"><a
                                                     href="{{ $link }}" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #EB5757; display: inline-block;"
-                                                    target="_blank">Download File</a></td>
+                                                    target="_blank">Konfirmasi
+                                                    akun</a></td>
                                         </tr>
                                         <tr>
                                             <p>{{ $link }}</p>
