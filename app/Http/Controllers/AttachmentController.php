@@ -14,10 +14,11 @@ use Illuminate\View\View;
 
 class AttachmentController extends Controller
 {
+
     function show($id)
     {
         $attachment = Attachment::query()->where("id", $id)->first();
-        if ($attachment == null) return redirect()->route("home");
+        if ($attachment == null) return Storage::get($id);
 
         return view('attachment', [
             "id" => $id,
