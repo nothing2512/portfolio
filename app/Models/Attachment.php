@@ -12,6 +12,7 @@ class Attachment extends Model
     protected $fillable = [
         "id",
         "name",
-        "dir"
+        "dir",
+        "code"
     ];
 }

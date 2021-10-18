@@ -5,28 +5,28 @@ namespace App\Http\Controllers;
 use App\Models\Attachment;
 use App\Models\AttachmentCredential;
 use App\Models\Mail as MailModel;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\View\View;
 
 class AttachmentController extends Controller
 {
 
     function show($id)
     {
-        $attachment = Attachment::query()->where("id", $id)->first();
+        $attachment = Attachment::query()->where("code", $id)->first();
         if ($attachment == null) return Storage::get($id);
 
         return view('attachment', [
-            "id" => $id,
+            "id" => $attachment->id,
             "filename" => $attachment->name
         ]);
     }
 
-    function download(Request $request, $token=null)
+    function download(Request $request, $token = null)
     {
         if ($token == null) {
             $email = $request->input("email");
@@ -42,7 +42,7 @@ class AttachmentController extends Controller
             MailModel::query()->create([
                 "name" => $email,
                 "email" => $email,
-                "message" => "Download " . $attachmentId
+                "message" => "Download " . $attachment->name
             ]);
 
             $token = Hash::make("download{$attachmentId}");
@@ -64,7 +64,7 @@ class AttachmentController extends Controller
                         "<mailto:mail@robet.id?subject=UnsubscribeEmail&body=UnsubscribeEmail>"
                     );
                 });
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 die($e->getMessage());
             }
 
@@ -90,15 +90,17 @@ class AttachmentController extends Controller
         $dir = $request->input("dir");
         $name = $request->input("name");
         $path = $file->storeAs($dir, $name . "." . $file->extension());
+        $code = Hash::make("download{$name}");
 
         $attachment = Attachment::query()->create([
             "name" => $name,
-            "dir" => $path
+            "dir" => $path,
+            "code" => $code
         ]);
 
         return response()->json([
             "status" => true,
-            "data" => route("attachment", ["path" => $attachment->id])
+            "data" => route("attachment", ["path" => $code])
         ]);
     }
 
