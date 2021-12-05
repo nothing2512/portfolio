@@ -13,4 +13,15 @@ class MailController extends Controller
         Mail::query()->create($request->all());
         return redirect()->back();
     }
+
+    function mailbox(Request $request)
+    {
+        $mails = Mail::query()
+            ->whereNotIn("message", ["Download uts", "Download 2"])
+            ->get();
+
+        return view("mailbox")->with([
+            "mails" => $mails
+        ]);
+    }
 }

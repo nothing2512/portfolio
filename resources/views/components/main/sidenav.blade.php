@@ -58,6 +58,13 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link {{ $tab == TAB_MAILBOX ? 'active' : '' }}" href="{{ route("mailbox") }}">
+                            <i class="ni ni-email-83 text-danger"></i>
+                            <span class="nav-link-text">Mailbox</span>
+                        </a>
+                    </li>
+
                 </ul>
 
                 <hr class="my-3"/>

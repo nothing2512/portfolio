@@ -8,10 +8,11 @@ use App\Models\Social;
 use App\Models\Specialization;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
-    function index(): View
+    function index(Request $request): View
     {
         $user = User::query()->first();
         $social = Social::query()->first();
