@@ -14,6 +14,7 @@ class ShortenController extends Controller
     function show($code)
     {
         $shorten = ShortUrl::query()->where("code", $code)->first();
+        if ($shorten == null) return redirect()->route("home");
         return redirect($shorten->url);
     }
 
