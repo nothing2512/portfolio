@@ -1,0 +1,44 @@
+<div class="section px-3 px-lg-4 pt-5" id="skills" x-data="data" xmlns:x-bind="http://www.w3.org/1999/xhtml">
+    <div class="container-narrow">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">My Skills</h2>
+        </div>
+        <div class="text-center">
+            <p class="mx-auto mb-3" style="max-width:600px" x-text="skillsDescription"></p>
+        </div>
+        <div class="bg-light p-3">
+            <div class="row">
+                <div class="col-md-5">
+                    <template x-for="skill in skills[0]">
+                        <div class="py-1">
+                            <div class="d-flex text-small fw-bolder">
+                                <span class="me-auto" x-text="skill.name"></span>
+                                <span x-text="`${skill.percentage}%`"></span>
+                            </div>
+                            <div class="progress my-1">
+                                <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right"
+                                     data-aos-delay="100" data-aos-anchor=".skills-section" x-bind:style="`width: ${skill.percentage}%`"
+                                     x-bind:aria-valuenow="skill.percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div class="col-md-5 offset-md-2">
+                    <template x-for="skill in skills[1]">
+                        <div class="py-1">
+                            <div class="d-flex text-small fw-bolder">
+                                <span class="me-auto" x-text="skill.name"></span>
+                                <span x-text="`${skill.percentage}%`"></span>
+                            </div>
+                            <div class="progress my-1">
+                                <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right"
+                                     data-aos-delay="100" data-aos-anchor=".skills-section" x-bind:style="`width: ${skill.percentage}%`"
+                                     x-bind:aria-valuenow="skill.percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
