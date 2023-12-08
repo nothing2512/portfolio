@@ -1,212 +1,606 @@
 <!DOCTYPE html>
-<!-- upto 2 directory depth-->
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
+<html lang="en">
 
+<head>
     <title>Robet Atiq Maulana Rifqi</title>
-    <meta name="description" content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
-    <meta name="keywords" content="Robet, Robet Atiq, Robet Atiq Maulana Rifqi, Robet Atiq Maulana, Portfolio, Resume, Developer, Programmer, DevOps, Backend, Golang, Microsoft Azure, Kubernetes, Team Leader, Senior Backend, Leader, Job">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
+    <meta name="keywords"
+        content="Robet, Robet Atiq, Robet Atiq Maulana Rifqi, Robet Atiq Maulana, Portfolio, Resume, Developer, Programmer, DevOps, Backend, Golang, Microsoft Azure, Kubernetes, Team Leader, Senior Backend, Leader, Job">
     <meta name="robots" content="index, follow">
 
     <meta itemprop="name" content="Robet Atiq Maulana Rifqi">
     <meta property="og:url" content="https://robet.me/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Robet Atiq Maulana Rifqi">
-    <meta property="og:description" content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
+    <meta property="og:description"
+        content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
     <meta property="og:image" content="https://robet.me/images/avatar.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Robet Atiq Maulana Rifqi">
-    <meta name="twitter:description" content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
+    <meta name="twitter:description"
+        content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
     <meta name="twitter:image" content="https://robet.me/images/avatar.jpg">
 
-    <link data-hid="icon" rel="icon" type="image/x-icon" href="favicon.ico">
-    <link data-hid="shortcut-icon" rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style"
-          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"
-          media="print" onload="this.media='all'"/>
-    <noscript>
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    </noscript>
-    <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
-    <noscript>
-        <style type="text/css">
-            [data-aos] {
-                opacity: 1 !important;
-                transform: translate(0) scale(1) !important;
-            }
-        </style>
-    </noscript>
+        const iconEl = document.createElement('link');
+        iconEl.setAttribute('rel', 'icon');
+        iconEl.setAttribute('type', 'image/x-icon')
+        iconEl.setAttribute('href', isDarkTheme ? 'images/favicon-light.png' : 'images/favicon-dark.png');
+        document.head.appendChild(iconEl);
+    </script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.min.css"
+        integrity="sha512-pI8MMQ9fC050RkbUOr8cJ75T5bYJpT1PAiML/7QZM6Fr74Ef6csO2/Cl92q+Qpxidm7WonXr6f+DbyxNHPGH8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+        }
+
+        header h4,
+        header h5 {
+            margin: 0 !important;
+            width: fit-content;
+        }
+
+        header .icon {
+            width: 32px;
+            object-fit: cover;
+        }
+
+        header a {
+            text-decoration: unset !important;
+            margin-left: 1rem;
+            font-size: medium;
+        }
+
+        section:nth-child(odd) .card,
+        section:nth-child(even) {
+            background-color: var(--bs-light);
+            color: var(--bs-dark);
+        }
+
+        footer,
+        section:nth-child(even) .card,
+        section:nth-child(odd) {
+            background-color: var(--bs-dark);
+            color: var(--bs-light);
+        }
+
+        footer {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            text-align: center;
+        }
+
+        .social-nav .nav-link {
+            color: var(--bs-white);
+        }
+
+        .social-nav .nav-item:nth-child(1) .nav-link {
+            padding-left: 0 !important;
+        }
+
+        .avatar.rounded {
+            border-radius: .5rem !important;
+        }
+
+        .about-info tbody tr td:nth-child(1),
+        .about-info tbody tr td:nth-child(2) {
+            vertical-align: top;
+        }
+
+        .about-info tbody tr td:nth-child(3) {
+            font-weight: 500 !important;
+        }
+
+        p,
+        span {
+            font-size: 18px;
+        }
+
+        .ql-toolbar.ql-snow {
+            border-top-right-radius: .25rem;
+            border-top-left-radius: .25rem;
+        }
+
+        .ql-container.ql-snow {
+            border-bottom-right-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+        }
+
+        footer .icon {
+            color: var(--bs-light);
+            text-decoration: unset;
+            padding: .5rem;
+        }
+    </style>
 </head>
-<body id="top">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5WMM6C9RJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-V5WMM6C9RJ');
-    </script>
-    <script src="./scripts/alpine.min.js"></script>
-    <script>
-        Alpine.data('data', () => ({
-            shortName: "Robet",
-            longName: "Robet Atiq Maulana Rifqi",
-            job: "Senior Backend & DevOps Developer",
-            fb: "https://www.facebook.com/rod.edgard",
-            ig: "https://www.instagram.com/pengguna.terblokir",
-            linkedin: "https://www.linkedin.com/in/robet-atiq",
-            github: "https://github.com/nothing2512",
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2" id="header-nav" role="navigation">
+            <div class="container-fluid">
+                <img class="icon me-3" src="images/favicon-light.png">
+                <a class="link-light navbar-brand site-title mb-0" href="#">Robet</a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2">
+                        <li class="nav-item"><a class="nav-link text-light" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#educations">Educations</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#experiences">Experiences</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-            description: "&nbsp;&nbsp;&nbsp;&nbsp;I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.",
-            age: Math.abs((new Date(Date.now() - new Date("12/25/2001"))).getUTCFullYear() - 1970),
-            email: "robet.personal@gmail.com",
-            phone: "+62-882-000-167-146",
-            address: "Malang, Indonesia",
-            status: "Working at Alkademi, Bandung",
-            photo: "images/avatar.jpg",
+    <div class="container-fluid px-0">
 
-            servicesDescription: "I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.",
-            services: [
-                {name: "Backend Development", img: "images/services/web-design.svg"},
-                {name: "IT Consultant", img: "images/services/graphic-design.svg"},
-                {name: "Team Management", img: "images/services/ui-ux.svg"},
-                {name: "DevOps Development", img: "images/services/app-development.svg"}
-            ],
+        <section class="py-5 px-3 px-lg-4">
+            <div class="row align-contents-center">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-center">
+                        <img class="avatar img-fluid mt-2" width="500" height="500"
+                            src="images/developer-ilustration.png" alt="Robet Atiq Maulana Rifqi">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="d-flex flex-column">
+                        <p class="lead text-uppercase mb-1">Hello!</p>
+                        <h1 class="intro-title marker">I'm Robet Atiq Maulana Rifqi</h1>
+                        <p class="lead fw-normal mt-3">Senior Backend &amp; DevOps Developer</p>
+                        <div class="social-nav">
+                            <nav role="navigation">
+                                <ul class="nav justify-content-left">
+                                    <li class="nav-item">
+                                        <a class="nav-link" title="Facebook" href="https://www.facebook.com/rod.edgard">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" title="Instagram"
+                                            href="https://www.instagram.com/cak.tebor/">
+                                            <i class="ri-instagram-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" title="LinkedIn"
+                                            href="https://www.linkedin.com/in/robet-atiq">
+                                            <i class="ri-linkedin-box-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" title="Github" href="https://github.com/nothing2512">
+                                            <i class="ri-github-fill"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mt-3">
+                            <a class="btn btn-outline-light mt-1" href="#contact">
+                                Get In Touch
+                            </a>
+                            <a href="cv.pdf" class="btn btn-outline-light mt-1" download="robet-cv.pdf">
+                                <i class="ri-download-2-line"></i> Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            skillsDescription: "I am a quick learner and specialize in multitude of skills required for Application Development.",
-            skills: [
-                [
-                    {name: "Backend", percentage: 95},
-                    {name: "DevOps", percentage: 85},
-                    {name: "Kubernetes", percentage: 85},
-                    {name: "Golang", percentage: 95},
-                    {name: "Microsoft Azure", percentage: 85},
-                    {name: "Database Analysis", percentage: 95},
-                ],
-                [
-                    {name: "Microservices", percentage: 90},
-                    {name: "Leads Team", percentage: 85},
-                    {name: "MongoDB", percentage: 90},
-                    {name: "Postgresql", percentage: 90},
-                    {name: "GRPC", percentage: 90},
-                    {name: "System Analysis", percentage: 90},
-                ]
-            ],
+        <section class="py-5 px-3 px-lg-4" id="about">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-md-5">
+                        <img class="avatar rounded img-fluid mt-2" width="400" height="400" src="images/avatar.jpg"
+                            alt="Robet Atiq Maulana Rifqi">
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mt-2">Hello !</h4>
+                        <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;I am an experienced Backend and DevOps
+                            Engineer with expertise in developing robust server-side solutions and implementing
+                            effective DevOps practices. I specialize in crafting high-performance systems, automating
+                            processes, and ensuring the reliability of projects. Let's collaborate to build and optimize
+                            together! </p>
+                        <table class="about-info">
+                            <tbody>
+                                <tr>
+                                    <td><span>Age</span></td>
+                                    <td>:</td>
+                                    <td><span id="age">21</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>Email</span></td>
+                                    <td>:</td>
+                                    <td><span>mail@robet.me</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>Phone</span></td>
+                                    <td>:</td>
+                                    <td><span>+62-882-000-167-146</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>Address</span></td>
+                                    <td>:</td>
+                                    <td><span>Malang, Indonesia</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            educations: [
-                [
-                    {
-                        name: "SDN Lowokwaru I Malang",
-                        major: "Elementary School",
-                        start: "2008",
-                        end: "2014",
-                        description: "<p></p>"
-                    },
-                    {
-                        name: "SMKN 4 Malang",
-                        major: "Senior High School - Informatics Engineering",
-                        start: "2017",
-                        end: "2020",
-                        description: "<p>I studied in senior high school for 3 years. In this school i started to learn programming from basic until expert.</p><p>I get some knowledge like : <ul><li>Backend Programming</li><li>C, PHP & Javascript Programming Language</li><li>Mysql Database</li><li>Android Native Development</li><li>OOP</li></ul></p>"
-                    },
-                ],
-                [
-                    {
-                        name: "SMPN 18 Malang",
-                        major: "Junior High School",
-                        start: "2014",
-                        end: "2017",
-                        description: "<p></p>"
-                    },
-                    {
-                        name: "SMK Coding",
-                        major: "Android Development",
-                        start: "January 2018",
-                        end: "April 2018",
-                        description: "<p>SMK Coding is an Indonesian Informatics Ministry programs, this programs is for senior high school and i'm studied in the first batch. SMK Coding program teach basic android development until fetching data from rest api.</p>"
-                    },
-                    {
-                        name: "University State of Jakarta",
-                        major: "Informatics Engineering",
-                        start: "2020",
-                        end: "2023",
-                        description: "<p>To expertise in programming, i'm continued study at university state of jakarta for 3.5 years. As a college, i get some advanced knowledge about programming like :<ul><li>Advanced Entity Relational Database</li><li>Programming Algorithm (e.g., sorting, searching, etc.)</li><li>System analysis</li></ul></p>"
-                    }
-                ],
-            ],
+        <section class="py-5 px-3 px-lg-4" id="services">
+            <div class="container py-5">
+                <h1 class="text-center">My Services</h1>
+                <p class="text-center mt-3">I offer services fit for any website or app. I can quickly maximize timely
+                    deliverables for real-time schemas. </p>
+                <div class="container pt-lg-5">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img class="mb-4" width="96" height="96" src="images/svg/backend.svg">
+                            <h5>Backend Development</h5>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="mb-4" width="96" height="96" src="images/svg/it-consultant.svg">
+                            <h5>IT Consultant</h5>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="mb-4" width="96" height="96" src="images/svg/team-management.svg">
+                            <h5>Team Management</h5>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="mb-4" width="96" height="96" src="images/svg/devops.svg">
+                            <h5>DevOps</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            experiences: [
-                [
-                    {
-                        job: "SMK Coding",
-                        company: "Informatics Ministry Program",
-                        start: "May 2018",
-                        end: "December 2020",
-                        description: "<p>After graduate in first batch SMK Coding, i'm work part time in this programs for the next batch. In this job, i taught android development for 3 batches in 2 years.</p><p>Key Skills : <ul><li>Android Development</li><li>Mentoring</li></ul></p>"
-                    },
-                    {
-                        job: "Lead Backend & DevOps Engineer",
-                        company: "Ezy Industries, Malang",
-                        start: "June 2021",
-                        end: "Present",
-                        description: "<p>I'm started work in this company as a senior backend & devops engineer, in this job i handled backend using Golang programming language and microservices architecture, i'm also handled server using Azure Kubernetes Services, after 2 years work, i'm promoted as lead backend & devops engineer.</p><p> In this job, i made one LMS (Learning Management System) that using CMS (Content Management System) that can be implemented to many website using same core, this LMS have some features that can help student to improve skills like : <ul><li>Class Management</li><li>Course Management</li><li>SSO</li><li>Auto Grading Assignment</li><li>Form Submission</li><li>In-app compiler with +10 programming languages </li><li>Event & Attendances</li></ul></p><p>Key Skills : <ul><li>Microsoft Azure</li><li>Kubernetes</li><li>Microservices</li><li>Golang</li></ul></p>"
-                    }
-                ],
-                [
-                    {
-                        job: "Junior Backend & DevOps Engineer",
-                        company: "Ezy Industries, Malang",
-                        start: "December 2020",
-                        end: "June 2021",
-                        description: "<p>In this company, i'm work full time as a backend & devops developer, in this job i knew better about programming like <ul><li>Code architecture</li><li>Deployment using Docker and VPS (Virtual Private Server)</li><li>PostgreSQL</li><li>MongoDB</li><li>Project Framework (e.g., Legacy AdonisJS, Laravel, etc.)</li></ul></p><p>4 Prjects that i ever made on this company that is : <ul><li>Ngajilagi (course application that teach about religion)</li><li>Bacatarot (Booking system to problem consultation)</li><li>Remap (Local social media on Malang, Indonesia)</li><li>JongKreatif (course application that teach about programming)</li></ul></p><p>Key Skills : <ul><li>Virtual Private Server</li><li>Programming Framework</li><li>Backend</li><li>Docker</li></ul></p>"
-                    },
-                ],
-            ],
+        <section class="py-5 px-3 px-lg-4" id="skills">
+            <div class="container py-5">
+                <h1 class="text-center">My Skills</h1>
+                <p class="text-center mt-3">I am a quick learner and specialize in multitude of skills required for
+                    Application Development.</p>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <button class="btn btn-dark mx-2 my-2 p-3">Analyst System</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Team Management</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Server Management</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Microservices</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Kubernetes</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Backend</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">DevOps</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Performance Handling</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Javascript</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Golang</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">PostgreSQL</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">MongoDB</button>
+                    <button class="btn btn-dark mx-2 my-2 p-3">Microsoft Azure</button>
+                </div>
+            </div>
+        </section>
 
-            contact: {
-                name: "",
-                body: ""
-            },
-            contactMe() {
-                const subject = `Contact Request From ${this.contact.name}`;
-                location.href = `mailto:${this.email}?subject=${subject}&body=${this.contact.body}`
-            }
-        }))
-    </script>
-    <div x-html="await (await fetch('components/header.html')).text()"></div>
-    <div class="page-content">
-        <div id="content">
-            <div x-html="await (await fetch('components/about.html')).text()"></div>
-            <div x-html="await (await fetch('components/about-2.html')).text()"></div>
-            <div x-html="await (await fetch('components/services.html')).text()"></div>
-            <div x-html="await (await fetch('components/skills.html')).text()"></div>
-            <div x-html="await (await fetch('components/educations.html')).text()"></div>
-            <div x-html="await (await fetch('components/experiences.html')).text()"></div>
-            <div x-html="await (await fetch('components/contact.html')).text()"></div>
-            <div x-html="await (await fetch('components/footer.html')).text()"></div>
-        </div>
+        <section class="py-5 px-3 px-lg-4" id="educations">
+            <div class="container-py-5">
+                <h1 class="text-center mb-3">Educations</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Vocational High School 4 Malang</h4>
+                                    <h6 class="text-center fw-lighter">Informatics Engineering (2017 - 2020)</h6>
+                                    <hr>
+                                    <span>
+                                        <p class="fw-light">I studied in senior high school for 3 years. In this school
+                                            i started to learn programming from basic until expert.<br><br>Here's my
+                                            knowledge i got :</p>
+                                        <ul>
+                                            <li>Backend Programming</li>
+                                            <li>C, PHP &amp; Javascript Programming Language</li>
+                                            <li>Mysql Database</li>
+                                            <li>Android Native Development</li>
+                                            <li>OOP</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mt-3">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">SMK Coding</h4>
+                                    <h6 class="text-center fw-lighter">Android Development (January 2018-April 2018)
+                                    </h6>
+                                    <hr>
+                                    <span>
+                                        <p class="fw-light">SMK Coding is an Indonesian Informatics Ministry programs,
+                                            this programs is for senior high school and i'm studied in the first batch.
+                                            SMK Coding program teach basic android development until fetching data from
+                                            rest api.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">University State of Jakarta</h4>
+                                    <h6 class="text-center fw-lighter">Informatics Engineering (2020-2023)</h6>
+                                    <hr>
+                                    <span>
+                                        <p class="fw-light">To expertise in programming, i'm continued study at
+                                            university state of jakarta for 3.5 years. As a college, i got some advanced
+                                            knowledge about programming that is :</p>
+                                        <ul>
+                                            <li>Advanced Entity Relational Database</li>
+                                            <li>Programming Algorithm (e.g., sorting, searching, etc.)</li>
+                                            <li>System analysis</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 px-3 px-lg-4" id="experiences">
+            <div class="container-py-5">
+                <h1 class="text-center">Experiences</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">SMK Coding</h4>
+                                    <h6 class="text-center fw-lighter">Informatics Ministry Program (May 2018-December
+                                        2020)</h6>
+                                    <hr>
+                                    <span>
+                                        <p class="fw-light">After graduate in first batch SMK Coding, i'm work part time
+                                            in this programs for the next batch. In this job, i taught android
+                                            development for 3 batches in 2 years.<br><br>Key Skills :</p>
+                                        <ul>
+                                            <li>Android Development</li>
+                                            <li>Mentoring</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Lead Backend & DevOps Engineer</h4>
+                                    <h6 class="text-center fw-lighter">Alkademi, Bandung (June 2021 - Present)</h6>
+                                    <hr>
+                                    <span>
+                                        <p class="fw-light">I'm started work in this company as a senior backend &
+                                            devops engineer, in this job i handled backend using Golang programming
+                                            language and microservices architecture, i'm also handled server using Azure
+                                            Kubernetes Services, after 2 years work, i'm promoted as lead backend &
+                                            devops engineer.<br><br>
+                                            In this job, i made one LMS (Learning Management System) that using CMS
+                                            (Content Management System) that can be implemented to many website using
+                                            same core, this LMS have some features that can help student to improve
+                                            skills like :<br><br>
+                                        </p>
+                                        <ul>
+                                            <li>Class Management</li>
+                                            <li>Course Management</li>
+                                            <li>SSO</li>
+                                            <li>Auto Grading Assignment</li>
+                                            <li>Form Submission</li>
+                                            <li>In-app compiler with +10 programming languages </li>
+                                            <li>Event &amp; Attendances</li>
+                                        </ul>
+                                        <p class="fw-light">Key Skiils : </p>
+                                        <ul>
+                                            <li>Microsoft Azure</li>
+                                            <li>Kubernetes</li>
+                                            <li>Microservices</li>
+                                            <li>Golang</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mt-3">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Junior Backend & DevOps Engineer</h4>
+                                    <h6 class="text-center fw-lighter">Ezy Industries, Malang (December 2020-June 2021)
+                                    </h6>
+                                    <hr>
+                                    <span>
+                                        <p class="fw-light">In this company, i'm work full time as a backend & devops
+                                            developer, in this job i knew better about programming like</p>
+                                        <ul>
+                                            <li>Code architecture</li>
+                                            <li>Deployment using Docker and VPS (Virtual Private Server)</li>
+                                            <li>PostgreSQL</li>
+                                            <li>MongoDB</li>
+                                            <li>Project Framework (e.g., Legacy AdonisJS, Laravel, etc.)</li>
+                                        </ul>
+                                        <p class="fw-light">4 Prjects that i ever made on this company that is :</p>
+                                        <ul>
+                                            <li>Ngajilagi (course application that teach about religion)</li>
+                                            <li>Bacatarot (Booking system to problem consultation)</li>
+                                            <li>Remap (Local social media on Malang, Indonesia)</li>
+                                            <li>JongKreatif (course application that teach about programming)</li>
+                                        </ul>
+                                        <p class="fw-light">Key Skills :</p>
+                                        <ul>
+                                            <li>Virtual Private Server</li>
+                                            <li>Programming Framework</li>
+                                            <li>Backend</li>
+                                            <li>Docker</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 px-3 px-lg-4" id="contact">
+            <div class="container-py-5">
+                <h1 class="text-center">Contact Me</h1>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="name" class="form-control" id="name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" style="height: 10rem;" id="message"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-dark" onclick="sendMessage()">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <dib class="col-md-6 mt-3">
+                            <h3>Let's talk how I can help you!</h3>
+                            <p>If you like my work and want to avail my services then drop me a message using the
+                                contact form.</p>
+                            <p>Or get in touch using my email or my contact number.</p>
+                            <p>See You!</p>
+                            <table class="about-info">
+                                <tbody>
+                                    <tr>
+                                        <td><span>Email</span></td>
+                                        <td>:</td>
+                                        <td><span>mail@robet.me</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Phone</span></td>
+                                        <td>:</td>
+                                        <td><span>+62-882-000-167-146</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>LinkedIn</span></td>
+                                        <td>:</td>
+                                        <td><span>https://www.linkedin.com/in/robet-atiq</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Github</span></td>
+                                        <td>:</td>
+                                        <td><span>https://github.com/nothing2512</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Instagram</span></td>
+                                        <td>:</td>
+                                        <td><span>https://www.instagram.com/cak.tebor/</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dib>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
-    <div id="scrolltop"><a class="btn btn-secondary" href="#top"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
-    <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
-    <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
-    <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
-    <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
-    <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-    <script src="./scripts/aos.min.js?ver=1.2.0"></script>
-    <script src="./scripts/main.js?ver=1.2.0"></script>
-    </body>
+
+    <footer>
+        <div class="d-flex flex-column">
+            <h3>Robet Atiq Maulana Rifqi</h3>
+            <p>Leads Backend & DevOps Engineer</p>
+            <div class="mb-3 mt-3">
+                <a class="icon" title="Facebook" href="https://www.facebook.com/rod.edgard">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a class="icon" title="Instagram" href="https://www.instagram.com/cak.tebor/">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a class="icon" title="LinkedIn" href="https://www.linkedin.com/in/robet-atiq">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a class="icon" title="Github" href="https://github.com/nothing2512">
+                    <i class="ri-github-fill"></i>
+                </a>
+            </div>
+            <p class="fw-light mt-4">&copy; Robet Atiq Maulana Rifqi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        function sendMessage() {
+            let subject = encodeURIComponent(`Mail from : ` + document.getElementById("name").value)
+            let body = encodeURIComponent(document.getElementById("message").value)
+            location.href = `mailto:mail@robet.me?&subject=${subject}&body=${body}`
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var header = document.querySelector("header");
+
+            function scroll(elementId) {
+                var targetElement = document.getElementById(elementId);
+
+                if (targetElement) window.scrollTo({
+                    top: targetElement.offsetTop - header.offsetHeight,
+                    behavior: "smooth"
+                });
+            }
+
+            addEventListener("click", function (event) {
+                if (event.target.tagName === "A") {
+                    let href = event.target.getAttribute("href")
+                    if (href.includes("#")) {
+                        event.preventDefault()
+                        scroll(href.replaceAll("#", ""))
+                    }
+                }
+            });
+
+            let age = Math.abs((new Date(Date.now() - new Date("12/25/2001"))).getUTCFullYear() - 1970)
+            document.getElementById("age").innerHTML = `${age}`
+        });
+    </script>
+</body>
+
 </html>
