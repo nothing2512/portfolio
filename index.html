@@ -27,6 +27,11 @@
         content="I am a passionate technology enthusiast with a strong drive for innovation and continuous learning. With a solid background in backend development and a keen interest in emerging technologies, I strive to make a positive impact in the industry. Throughout my career, I have demonstrated expertise in leading teams and creating scalable microservices for Multi-Tenant SaaS applications. I am particularly adept at leveraging my skills in areas such as DevOps, database and system analysis, and software performance analysis to drive business success.">
     <meta name="twitter:image" content="https://robet.me/images/avatar.jpg">
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/remixicon.min.css" rel="stylesheet"/>
+    <link href='css/poppins.css' rel='stylesheet'>
+    <link href="css/portfolio.min.css" rel="stylesheet">
+
     <script>
         const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -36,98 +41,6 @@
         iconEl.setAttribute('href', isDarkTheme ? 'images/favicon-light.png' : 'images/favicon-dark.png');
         document.head.appendChild(iconEl);
     </script>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.min.css"
-        integrity="sha512-pI8MMQ9fC050RkbUOr8cJ75T5bYJpT1PAiML/7QZM6Fr74Ef6csO2/Cl92q+Qpxidm7WonXr6f+DbyxNHPGH8g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700' rel='stylesheet'>
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-        }
-
-        header h4,
-        header h5 {
-            margin: 0 !important;
-            width: fit-content;
-        }
-
-        header .icon {
-            width: 32px;
-            object-fit: cover;
-        }
-
-        header a {
-            text-decoration: unset !important;
-            margin-left: 1rem;
-            font-size: medium;
-        }
-
-        section:nth-child(odd) .card,
-        section:nth-child(even) {
-            background-color: var(--bs-light);
-            color: var(--bs-dark);
-        }
-
-        footer,
-        section:nth-child(even) .card,
-        section:nth-child(odd) {
-            background-color: var(--bs-dark);
-            color: var(--bs-light);
-        }
-
-        footer {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-            text-align: center;
-        }
-
-        .social-nav .nav-link {
-            color: var(--bs-white);
-        }
-
-        .social-nav .nav-item:nth-child(1) .nav-link {
-            padding-left: 0 !important;
-        }
-
-        .avatar.rounded {
-            border-radius: .5rem !important;
-        }
-
-        .about-info tbody tr td:nth-child(1),
-        .about-info tbody tr td:nth-child(2) {
-            vertical-align: top;
-        }
-
-        .about-info tbody tr td:nth-child(3) {
-            font-weight: 500 !important;
-        }
-
-        p,
-        span {
-            font-size: 18px;
-        }
-
-        .ql-toolbar.ql-snow {
-            border-top-right-radius: .25rem;
-            border-top-left-radius: .25rem;
-        }
-
-        .ql-container.ql-snow {
-            border-bottom-right-radius: .25rem;
-            border-bottom-left-radius: .25rem;
-        }
-
-        footer .icon {
-            color: var(--bs-light);
-            text-decoration: unset;
-            padding: .5rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -173,11 +86,6 @@
                             <nav role="navigation">
                                 <ul class="nav justify-content-left">
                                     <li class="nav-item">
-                                        <a class="nav-link" title="Facebook" href="https://www.facebook.com/rod.edgard">
-                                            <i class="ri-facebook-fill"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" title="Instagram"
                                             href="https://www.instagram.com/cak.tebor/">
                                             <i class="ri-instagram-fill"></i>
@@ -217,37 +125,13 @@
                         <img class="avatar rounded img-fluid mt-2" width="400" height="400" src="images/avatar.jpg"
                             alt="Robet Atiq Maulana Rifqi">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
                         <h4 class="mt-2">Hello !</h4>
                         <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;I am an experienced Backend and DevOps
                             Engineer with expertise in developing robust server-side solutions and implementing
                             effective DevOps practices. I specialize in crafting high-performance systems, automating
                             processes, and ensuring the reliability of projects. Let's collaborate to build and optimize
                             together! </p>
-                        <table class="about-info">
-                            <tbody>
-                                <tr>
-                                    <td><span>Age</span></td>
-                                    <td>:</td>
-                                    <td><span id="age">21</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Email</span></td>
-                                    <td>:</td>
-                                    <td><span>mail@robet.me</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Phone</span></td>
-                                    <td>:</td>
-                                    <td><span>+62-882-000-167-146</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>Address</span></td>
-                                    <td>:</td>
-                                    <td><span>Malang, Indonesia</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
@@ -508,16 +392,6 @@
                             <table class="about-info">
                                 <tbody>
                                     <tr>
-                                        <td><span>Email</span></td>
-                                        <td>:</td>
-                                        <td><span>mail@robet.me</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span>Phone</span></td>
-                                        <td>:</td>
-                                        <td><span>+62-882-000-167-146</span></td>
-                                    </tr>
-                                    <tr>
                                         <td><span>LinkedIn</span></td>
                                         <td>:</td>
                                         <td><span>https://www.linkedin.com/in/robet-atiq</span></td>
@@ -547,9 +421,6 @@
             <h3>Robet Atiq Maulana Rifqi</h3>
             <p>Leads Backend & DevOps Engineer</p>
             <div class="mb-3 mt-3">
-                <a class="icon" title="Facebook" href="https://www.facebook.com/rod.edgard">
-                    <i class="ri-facebook-fill"></i>
-                </a>
                 <a class="icon" title="Instagram" href="https://www.instagram.com/cak.tebor/">
                     <i class="ri-instagram-fill"></i>
                 </a>
@@ -565,42 +436,7 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-
-    <script>
-
-        function sendMessage() {
-            let subject = encodeURIComponent(`Mail from : ` + document.getElementById("name").value)
-            let body = encodeURIComponent(document.getElementById("message").value)
-            location.href = `mailto:mail@robet.me?&subject=${subject}&body=${body}`
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            var header = document.querySelector("header");
-
-            function scroll(elementId) {
-                var targetElement = document.getElementById(elementId);
-
-                if (targetElement) window.scrollTo({
-                    top: targetElement.offsetTop - header.offsetHeight,
-                    behavior: "smooth"
-                });
-            }
-
-            addEventListener("click", function (event) {
-                if (event.target.tagName === "A") {
-                    let href = event.target.getAttribute("href")
-                    if (href.includes("#")) {
-                        event.preventDefault()
-                        scroll(href.replaceAll("#", ""))
-                    }
-                }
-            });
-
-            let age = Math.abs((new Date(Date.now() - new Date("12/25/2001"))).getUTCFullYear() - 1970)
-            document.getElementById("age").innerHTML = `${age}`
-        });
-    </script>
+    <script src="js/portfolio.min.js"></script>
 </body>
 
 </html>
