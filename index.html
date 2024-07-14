@@ -284,6 +284,7 @@
         <section class="py-5 px-3 px-lg-4" id="experiences">
             <div class="container-py-5">
                 <h1 class="text-center">Experiences</h1>
+                <p class="text-center mt-3" id="experienced"></p>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 mt-3">
@@ -458,6 +459,11 @@
             <p class="fw-light mt-4">&copy; Robet Atiq Maulana Rifqi. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let experience = new Date().getFullYear()
+        document.getElementById("experienced").innerHTML = `${experience - 2018}+ years experienced in programming`
+    </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/portfolio.min.js"></script>
