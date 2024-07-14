@@ -6,7 +6,7 @@
 function sendMessage() {
     let subject = encodeURIComponent(`Mail from : ` + document.getElementById("name").value)
     let body = encodeURIComponent(document.getElementById("message").value)
-    location.href = `mailto:mail@robet.me?&subject=${subject}&body=${body}`
+    location.href = `mailto:mail@robet.my.id?&subject=${subject}&body=${body}`
 }
 
 document.addEventListener("DOMContentLoaded", function () {
