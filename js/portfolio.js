@@ -32,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    let age = Math.abs((new Date(Date.now() - new Date("12/25/2001"))).getUTCFullYear() - 1970)
-    document.getElementById("age").innerHTML = `${age}`
+    // let age = Math.abs((new Date(Date.now() - new Date("12/25/2001"))).getUTCFullYear() - 1970)
+    // document.getElementById("age").innerHTML = `${age}`
 });
